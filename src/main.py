@@ -89,14 +89,14 @@ def mail_report(imageName, report_email_sub, report_dash_url, date):
 def logger(level, message):
 
     log_base = {
-        "rpk": {
+        "log": {
             "log": {
                 "level": level,
                 "type": "grafanareporter"
             }
         }
     }
-    log_base["rpk"]["log"]["message"] = message
+    log_base["log"]["log"]["message"] = message
     print(json.dumps(log_base))
 
 
